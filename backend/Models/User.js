@@ -16,6 +16,11 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
+    monthlyBudget: {
+        type: Number,
+        default: 0,
+        min: 0
+    },
     expenses: [
         {
             text: {

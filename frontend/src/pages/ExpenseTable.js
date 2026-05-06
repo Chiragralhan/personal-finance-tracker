@@ -1,11 +1,14 @@
 import React from 'react';
 
 const ExpenseTable = ({ expenses, deleteExpens }) => {
+    if (!expenses.length) {
+        return <p className="empty-state-text">No transactions yet.</p>;
+    }
 
     return (
         <div className="expense-list">
-            {expenses.map((expense, index) => (
-                <div key={index} className="expense-item">
+            {expenses.map((expense) => (
+                <div key={expense._id} className="expense-item">
                     <button className="delete-button" onClick={() =>
                         deleteExpens(expense._id)}>X</button>
                     <div className="expense-description-wrap">
