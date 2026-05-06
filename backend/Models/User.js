@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const allowedCategories = ['Food', 'Travel', 'Shopping', 'Bills', 'Entertainment', 'Books', 'Other'];
 
 const UserSchema = new Schema({
     name: {
@@ -24,6 +25,11 @@ const UserSchema = new Schema({
             amount: {
                 type: Number,
                 required: true
+            },
+            category: {
+                type: String,
+                required: true,
+                enum: allowedCategories
             },
             createdAt: {
                 type: Date,

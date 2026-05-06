@@ -56,6 +56,16 @@ body{
   border-bottom: 1px solid black;
 }
 
+.container select{
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
+
 .container input::placeholder{
   font-size: 12px;
   font-style: italic;
@@ -129,6 +139,21 @@ button:active {
 
 .expense-description {
   font-weight: bold;
+}
+
+.expense-description-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.expense-category {
+  font-size: 12px;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 999px;
 }
 
 .delete-button {
